@@ -10,5 +10,15 @@
 //cliente1,2,3... = são objetos
 export class Cliente {
     nome;
-    cpf;
+    _cpf;
+
+    get cpf(){
+        return this._cpf;
+    }
+
+    constructor(nome, cpf){
+        this.nome = nome;
+        this._cpf = cpf;
+    } //constructor vai ser chamado quando for criado um new objeto de Cliente;
+      //Só poderá ser atribuído 1 vez; 
 }
