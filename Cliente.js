@@ -9,9 +9,7 @@
 
 //cliente1,2,3... = são objetos
 export class Cliente {
-    nome;
-    _cpf;
-
+    
     get cpf(){
         return this._cpf;
     }
