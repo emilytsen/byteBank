@@ -80,5 +80,5 @@
 
 //SUPER: serve para invocar alguma função de uma outra classe.
 //ex: 
-//super(0, cliente, agencia); (chamar constructor de uma outra class) 
-//super.teste; (chamar método teste de uma outra class)
+//super(0, cliente, agencia); (chamar/invocar constructor de uma outra class) 
+//super.teste; (chamar/invocar método teste de uma outra class)

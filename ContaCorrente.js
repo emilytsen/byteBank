@@ -3,7 +3,7 @@ import {
 } from "./Conta.js";
 
 export class ContaCorrente extends Conta { //vai inserir código do Conta aqui (herança); 
-    static numeroDeContas = 0;
+    static numeroDeContas = 0; //sem o static ele volta para o 0 a cada nova conta
 
     constructor(cliente, agencia) {
         super(0, cliente, agencia); //vai chamar o construtor da classe pai (Conta);
@@ -11,12 +11,7 @@ export class ContaCorrente extends Conta { //vai inserir código do Conta aqui (
     }
 
     sacar(valor) {
-
         let taxa = 1.1; //taxa de 10%; 
-        const valorSacado = taxa * valor;
-        if (this._saldo >= valorSacado) {
-            this._saldo -= valorSacado;
-            return valorSacado;
-        }
+        return this._sacar(valor, taxa);
     }
 }
