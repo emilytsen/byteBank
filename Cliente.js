@@ -14,9 +14,18 @@ export class Cliente {
         return this._cpf;
     }
 
-    constructor(nome, cpf){
+    constructor(nome, cpf, senha){
         this.nome = nome;
         this._cpf = cpf;
-    } //constructor vai ser chamado quando for criado um new objeto de Cliente;
-      //Só poderá ser atribuído 1 vez; 
+        this._senha = senha;
+    }
+    
+    autenticar(senha){
+        return senha == this._senha;
+    }   
+    //constructor vai ser chamado quando for criado um new objeto de Cliente;
+    //Só poderá ser atribuído 1 vez; 
 }
+
+    
+

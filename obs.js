@@ -1,4 +1,5 @@
-//INDEX (PRIMEIRA FASE)
+/*
+INDEX (PRIMEIRA FASE)
      
 conta2.cliente = new Cliente; atribuindo valores de outra forma
 conta2.cliente.nome = "Augusto";
@@ -19,7 +20,7 @@ console.log(conta1.cliente); //só é possívelç através do get (ContaCorente.
 
 ---------------------------------------------------------------------------------------
 
-//CONTACORRENTE (antiga meneira de fazer, essa lógica foi transferida para o Conta)
+CONTACORRENTE (antiga meneira de fazer, essa lógica foi transferida para o Conta)
 
 import { Cliente } from "./Cliente.js";
 
@@ -78,18 +79,18 @@ export class ContaCorrente {
 }
 
 
-//SUPER: serve para invocar alguma função de uma outra classe.
-//ex: 
-//super(0, cliente, agencia); (chamar/invocar constructor de uma outra class) 
-//super.teste; (chamar/invocar método teste de uma outra class)
+SUPER: serve para invocar alguma função de uma outra classe.
+ex: 
+super(0, cliente, agencia); (chamar/invocar constructor de uma outra class) 
+super.teste; (chamar/invocar método teste de uma outra class)
 
-// class = é um molde
-// Não servem apenas para dados, servem para comportamentos ou oprerações mais conhecidas como métodos (ex: o sacar ) 
-//propriedade =  são atribuições dentro dos métodos
+class = é um molde
+Não servem apenas para dados, servem para comportamentos ou oprerações mais conhecidas como métodos (ex: o sacar ) 
+propriedade =  são atribuições dentro dos métodos
 
 
 -----------------------------------------------------------------
-//INDEX (SEGUNDA FASE)
+INDEX (SEGUNDA FASE)
 
 
 const cliente1 = new Cliente("Emily Tsen", 12345678910);
@@ -121,3 +122,22 @@ contaCorrente2.sacar(100);
 
 
 console.log(`Número de contas: ${ContaCorrente.numeroDeContas}`)    
+
+--------------------------------------------------------------------------------------------
+
+FUNÇÃO PARA SABER SE ESTÁ LOGADO
+
+//Um ser que seja aultenticavel é aquele que possui um atributo "senha"
+export class SistemaAutenticacao{
+    static login(funcionario, senha){
+        return funcionario._senha == senha; //(vai retornar: true or false)
+        //ex: (fuifionario3, 123456);
+    }
+} 
+//polimorfismo, ou seja, esse sistema de autentificação funcionará para qualquer chamada que tenha um atributo "_senha"
+
+INPUT:
+let estaLogadoG = SistemaAutenticacao.login(gerente1, 123456)
+console.log(estaLogadoG);
+
+*/
